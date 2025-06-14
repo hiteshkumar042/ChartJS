@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", () => {
+    loadChart();
+});
+
 async function loadChart() {
     try {
         let response = await fetch('https://dummyjson.com/c/ed3b-f658-4a65-b3af');
@@ -26,7 +30,7 @@ async function loadChart() {
                     title: {
                         display: true,
                         text: 'Company Shares Data'
-                    }
+                    },
                 }
             }
         });
@@ -35,5 +39,3 @@ async function loadChart() {
         console.log(err);
     }
 }
-
-loadChart();
